@@ -1,0 +1,32 @@
+.chip-root {
+  --chip-color: var(--accent);
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  border: 2px solid color-mix(in srgb, var(--chip-color) 40%, transparent);
+  background: transparent;
+  color: var(--chip-color);
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.chip-root:hover {
+  background: color-mix(in srgb, var(--chip-color) 13%, transparent);
+}
+
+.chip-root[data-selected="true"] {
+  background: var(--chip-color);
+  color: #14141c;
+}
+
+.chip-root[data-selected="true"]:hover {
+  background: var(--chip-color);
+}

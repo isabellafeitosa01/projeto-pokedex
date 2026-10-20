@@ -1,0 +1,127 @@
+:root {
+  /* Cores base */
+  --bg-primary: #FDF1E6;
+  --bg-gradient-mid: #FCE7DD;
+  --bg-gradient-end: #FADADD;
+  --surface: #FFFFFF;
+  --surface-alt: #FADADD;
+  --header-bg: linear-gradient(135deg,  #FFF8F0), #FDF2E8;
+  --border-subtle: #F6CBD1;
+  --border-input: #F6CBD1;
+
+  --text-primary: #252534;
+  --text-secondary: #8A7A80;
+  --text-muted: #93706C;
+  --text-faint: #B8A5A0;
+
+ --accent: #E8586A;/* tweakable via props.accentColor */
+ --white: #FFFFFF;
+ 
+  /* Cores por tipo de Pokémon */
+  --type-normal: #F4A6B9;
+  --type-fire: #F2984A;
+  --type-water: #7FB8E0;
+  --type-electric: #F5C542;
+  --type-grass: #8FBF6F;
+  --type-ice: #9FE0DB;
+  --type-fighting: #E08A7D;
+  --type-poison: #C9A0DC;
+  --type-ground: #D9B48F;
+  --type-flying: #B9A6E0;
+  --type-psychic: #F2A9D8;
+  --type-bug: #B5CB7A;
+  --type-rock: #C9B896;
+  --type-ghost: #A79BD1;
+  --type-dragon: #9B8FE0;
+
+  /* Tipografia */
+  --font-display: "Space Grotesk", sans-serif; /* títulos, nomes */
+  --font-body: system-ui, -apple-system, sans-serif;
+
+  /* Tamanhos/raios */
+  --radius-card: 22px;
+  --radius-modal: 28px;
+  --radius-pill: 999px;
+  --radius-chip: 14px;
+  --gap-grid: 20px;
+  --sprite-card: 96px;
+  --sprite-modal: 180px;
+  --page-size-default: 18;
+}
+
+body {
+  margin: 0;
+    background: linear-gradient(180deg, var(--bg-primary), var(--bg-gradient-mid) 55%, var(--bg-gradient-end));
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+button,
+span,
+div,
+input,
+label {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+p,
+span,
+label {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  appearance: none;
+  background: none;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
