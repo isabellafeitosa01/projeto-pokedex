@@ -29,27 +29,8 @@
   box-shadow:  0 0 0 4px rgba(255,90,95,0.18);
 } 
 
-.search-pokemon button {
-  height: 45px;
-  padding: 0 20px;
-  border: none;
-  border-radius: 25px;
-  background-color: var(--accent);
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
-.search-pokemon button:hover {
-  background-color: var(--type-normal);
-  transform: translateY(-2px);
-}
 
-.search-pokemon button:active {
-  transform: translateY(0);
-}
 
 @media (max-width: 600px) {
   .search-pokemon {
@@ -57,7 +38,7 @@
     align-items: stretch;
   }
 
-  .search-pokemon button {
+  .search-pokemon input {
     width: 100%;
   }
 }
