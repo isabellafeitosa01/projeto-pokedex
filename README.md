@@ -100,4 +100,4 @@ Os dados dos Pokémon vêm da [PokeAPI](https://pokeapi.co/), uma API pública e
 
 ## 📄 Licença
 
-Projeto pessoal de estudo — sinta-se à vontade para usar como referência.
+Projeto pessoal de estudo do curso impusionando devs - isabella feitosa.
