@@ -1,3 +1,4 @@
+
 .header-root {
   position: sticky;
   top: 0;
@@ -6,23 +7,27 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 18px;
-  padding: 30px 42px;
+  padding: 24px 32px;
   background: var(--header-bg);
   border-bottom: 2px solid var(--border-subtle);
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 20px;
-  flex: none;
+  gap: 16px;
+  flex: 1 1 100%;
+  min-width: 0;
 }
 
 .header-logo-ball {
   position: relative;
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   border-radius: 50%;
   background: var(--accent);
   overflow: hidden;
@@ -65,6 +70,7 @@
 .header-logo-text {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .header-logo-title {
@@ -82,24 +88,94 @@
   color: var(--text-muted);
 }
 
+/* Campo de busca */
+.search-pokemon {
+  flex: 1;
+  min-width: 0;
+  max-width: 320px;
+  margin-left: auto;
+}
+
+.search-pokemon input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Filtros de tipos */
 .header-chips {
   display: flex;
-  flex: 1;
+  flex: 1 1 100%;
   min-width: 0;
   gap: 10px;
   overflow-x: auto;
-  padding-bottom: 2px; 
-  flex-shrink: 0;
+  padding-bottom: 4px;
   justify-content: flex-start;
+  scrollbar-width: thin;
+}
+
+.header-chips > * {
+  flex-shrink: 0;
 }
 
 .header-chips::-webkit-scrollbar {
-  height: 7px;
-
+  height: 4px;
 }
 
 .header-chips::-webkit-scrollbar-thumb {
   background: var(--border-subtle);
-  border-radius: 4px; 
-  cursor: pointer;  
+  border-radius: 4px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .header-root {
+    gap: 14px;
+    padding: 20px 24px;
+  }
+
+  .header-logo {
+    gap: 12px;
+  }
+
+  .search-pokemon {
+    max-width: none;
+  }
+}
+
+/* Celular */
+@media (max-width: 480px) {
+  .header-root {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .header-logo {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header-logo-ball {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-logo-title {
+    font-size: 18px;
+  }
+
+  .header-logo-subtitle {
+    font-size: 10px;
+  }
+
+  .search-pokemon {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+  }
+
+  .header-chips {
+    gap: 8px;
+  }
 }
