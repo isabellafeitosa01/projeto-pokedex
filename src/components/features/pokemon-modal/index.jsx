@@ -67,7 +67,9 @@ export function PokemonModal({ pokemon, onClose }) {
             )}
           </div>
   
-          <div className="pokemon-detail-modal-name">{pokemon.name}</div>
+          <div className="pokemon-detail-modal-name">
+      {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+         </div>
   
           <div className="pokemon-detail-modal-types">
             {types.map((type) => (
